@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dhanasyam Akasam — AI & Full-Stack Python Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef2f8;--surface:#fff;--ink:#14213d;--muted:#52607a;--line:#d3dbe8;--accent:#2f5bea;--accent-ink:#fff;--hi:#ffc93c;--hi-ink:#14213d;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1a33;--surface:#17254a;--ink:#eaf0ff;--muted:#a3b2d4;--line:#2a3b66;--accent:#7b9bff;--accent-ink:#0f1a33}}
+:root[data-theme="dark"]{--bg:#0f1a33;--surface:#17254a;--ink:#eaf0ff;--muted:#a3b2d4;--line:#2a3b66;--accent:#7b9bff;--accent-ink:#0f1a33}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "DM Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","DM Sans",sans-serif;line-height:1.05;margin:0}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+header.nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0;gap:16px;flex-wrap:wrap}
+header.nav b{font-family:"Bricolage Grotesque",sans-serif;font-size:20px}
+header.nav nav{display:flex;gap:20px;font-size:15px}
+header.nav a{text-decoration:none;color:var(--muted)}
+header.nav a:hover{color:var(--ink)}
+.hero{padding:56px 0 72px}
+.hero h1{font-size:clamp(52px,12vw,148px);font-weight:800;letter-spacing:-.04em}
+.hero h1 span{display:block}
+.hero h1 .l2{background:linear-gradient(transparent 62%,var(--hi) 62% 92%,transparent 92%);width:fit-content;color:var(--ink)}
+.role{font-size:clamp(19px,2.4vw,26px);max-width:34ch;margin:28px 0 0;color:var(--muted)}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.btn{display:inline-block;padding:13px 22px;border-radius:999px;font-weight:500;text-decoration:none;border:2px solid var(--ink)}
+.btn.p{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;margin-top:56px;border-top:2px solid var(--ink)}
+.facts div{padding:18px 20px 0 0}
+.facts strong{display:block;font:800 30px "Bricolage Grotesque",sans-serif}
+.facts small{color:var(--muted);font-size:15px}
+section{padding:72px 0;border-top:1px solid var(--line)}
+section>.wrap>h2{font-size:clamp(34px,5vw,56px);font-weight:800;letter-spacing:-.03em;margin-bottom:12px}
+.lead{color:var(--muted);max-width:60ch;margin:0 0 36px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:26px;display:flex;flex-direction:column;gap:12px}
+.card.feat{grid-column:1/-1;border-color:var(--ink);border-width:2px}
+.card h3{font-size:26px;font-weight:800}
+.card p{margin:0}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+.tags span{font-size:14px;padding:4px 12px;border-radius:999px;background:var(--bg);border:1px solid var(--line)}
+.card a.gh{font-weight:500;color:var(--accent)}
+ul.clean{margin:0;padding-left:20px}ul.clean li{margin:4px 0}
+.tl{display:grid;gap:0;border-left:3px solid var(--accent);margin-left:6px}
+.tl article{padding:0 0 28px 26px;position:relative}
+.tl article::before{content:"";position:absolute;left:-10px;top:8px;width:17px;height:17px;border-radius:50%;background:var(--hi);border:3px solid var(--bg);box-shadow:0 0 0 2px var(--accent)}
+.tl h3{font-size:22px}.tl .m{color:var(--muted);font-size:15px}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px 36px}
+.skills h3{font-size:19px;margin-bottom:8px}
+.skills p{margin:0;color:var(--muted);font-size:16px}
+.certs{columns:2 300px;column-gap:40px;margin:0;padding:0;list-style:none}
+.certs li{break-inside:avoid;padding:10px 0;border-bottom:1px solid var(--line)}
+.certs small{display:block;color:var(--muted)}
+.contact{font-size:clamp(22px,4vw,40px);font-family:"Bricolage Grotesque",sans-serif;font-weight:800}
+.contact a{text-decoration-thickness:3px;text-decoration-color:var(--hi);text-underline-offset:6px}
+.links{display:flex;gap:20px;flex-wrap:wrap;margin-top:20px}
+footer{padding:28px 0 40px;color:var(--muted);font-size:15px;border-top:1px solid var(--line)}
+@media (max-width:560px){body{font-size:16px}.wrap{padding:0 18px}header.nav nav{gap:14px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="nav"><b>Dhanasyam Akasam</b>
+<nav><a href="#work">Projects</a><a href="#experience">Internships</a><a href="#skills">Skills</a><a href="#credentials">Credentials</a><a href="#contact">Contact</a></nav></header>
+
+<main>
+<div class="hero">
+<h1><span>Dhanasyam</span><span class="l2">Akasam</span></h1>
+<p class="role">AI &amp; Data Science engineer who builds full-stack Python apps, voice-driven AI tools and ML pipelines.</p>
+<div class="cta"><a class="btn p" href="#work">See projects</a><a class="btn" href="mailto:dhanasyam3@gmail.com">Email me</a></div>
+<div class="facts">
+<div><strong>5</strong><small>APSCHE-recognised internships</small></div>
+<div><strong>1,000+</strong><small>dialogue queries handled in EchoEnglish AI</small></div>
+<div><strong>21</strong><small>certificates and credentials</small></div>
+<div><strong>1st prize</strong><small>Web Designing Competition, MVR College</small></div>
+</div>
+</div>
+</main>
+
+<section id="work"><h2>Projects</h2>
+<p class="lead">Seven builds, from conversational AI to design tools. Each links to its GitHub repository.</p>
+<div class="grid">
+<article class="card feat"><h3>EchoEnglish AI</h3>
+<p>A spoken-English practice platform. Learners talk or type, the app answers aloud, and an LLM points out grammar errors, scores vocabulary variety and suggests better phrasing.</p>
+<ul class="clean"><li>Browser Web Speech API for speech-to-text and text-to-speech.</li><li>Asynchronous Flask request handling for sub-second responses across 1,000+ dialogue queries.</li><li>Learners can switch between microphone and text at any point.</li></ul>
+<div class="tags"><span>Python · Flask</span><span>LLM API</span><span>Web Speech API</span><span>JavaScript</span></div>
+<a class="gh" href="https://github.com/Dhanasyam0996/echoenglish-ai">github.com/Dhanasyam0996/echoenglish-ai</a></article>
+
+<article class="card"><h3>MNC Placement Assessment &amp; Certification Hub</h3>
+<p>A placement-prep portal with timed technical tests, algorithm challenges and aptitude mocks. Certificates are generated as PDFs with a scannable QR code for verification.</p>
+<ul class="clean"><li>Chart.js dashboards: proficiency radar, score history, percentiles.</li><li>CSV and PDF score exports.</li></ul>
+<div class="tags"><span>Django</span><span>PostgreSQL / SQLite</span><span>ReportLab</span><span>Chart.js</span></div>
+<a class="gh" href="https://github.com/Dhanasyam0996/MNC-Placement-Assessment-Certification-Hub">View repository</a></article>
+
+<article class="card"><h3>Pixel-Perfect Palette 399</h3>
+<p>A colour generator that builds complementary, triadic, monochromatic and analogous schemes, then checks each pair against WCAG 2.1 AA/AAA contrast.</p>
+<ul class="clean"><li>Exports to Tailwind config, CSS variables and Figma tokens.</li></ul>
+<div class="tags"><span>JavaScript</span><span>HSL / RGB / HEX</span><span>WCAG 2.1</span></div>
+<a class="gh" href="https://github.com/Dhanasyam0996/pixel-perfect-palette-399">View repository</a></article>
+
+<article class="card"><h3>Still Frame Life</h3>
+<p>A photo portfolio built for speed: masonry layout with no layout shift, lazy loading, and a lightbox with keyboard navigation.</p>
+<ul class="clean"><li>WebP/AVIF compression and browser caching for Core Web Vitals.</li></ul>
+<div class="tags"><span>CSS Grid</span><span>Flexbox</span><span>Lazy loading</span></div>
+<a class="gh" href="https://github.com/Dhanasyam0996/still-frame-life">View repository</a></article>
+
+<article class="card"><h3>Scene Duplicate Bot</h3>
+<p>A command-line tool that scans folders for duplicate scene and state assets using MD5/SHA256 checksums, then syncs development environments.</p>
+<ul class="clean"><li>Configurable filters, thresholds, log levels and output folders.</li></ul>
+<div class="tags"><span>Python</span><span>Hashing</span><span>CLI</span></div>
+<a class="gh" href="https://github.com/Dhanasyam0996/scene-duplicate-bot">View repository</a></article>
+
+<article class="card"><h3>Predictive Classification Pipeline</h3>
+<p>An end-to-end supervised learning pipeline: imputation, one-hot encoding, scaling and outlier handling, then training and comparing four classifiers.</p>
+<ul class="clean"><li>Logistic Regression, Random Forest, SVM, Gradient Boosting.</li><li>GridSearchCV tuning, ROC-AUC, confusion matrices, joblib export.</li></ul>
+<div class="tags"><span>Scikit-Learn</span><span>Pandas</span><span>NumPy</span><span>Joblib</span></div></article>
+</div></section>
+
+<section id="experience"><h2>Internships</h2>
+<p class="lead">Five internships with App Genesis Soft Solutions, Vijayawada, under the APSCHE Andhra Pradesh internship programme. May – July 2026.</p>
+<div class="tl">
+<article><h3>Python Django</h3><div class="m">Software Engineering</div><p>Built full-stack apps in Django's MVT pattern, with normalised schemas, ORM queries and authenticated REST endpoints.</p></article>
+<article><h3>AWS with AI</h3><div class="m">Cloud &amp; AI Systems</div><p>Connected AWS storage and compute to ML inference scripts; set up API endpoints and IAM security policies.</p></article>
+<article><h3>Machine Learning with Project</h3><div class="m">Applied ML Engineering</div><p>Trained models, tuned them with GridSearchCV, validated precision, recall and ROC-AUC, and delivered a capstone with real-time inference.</p></article>
+<article><h3>Data Science</h3><div class="m">Analytics &amp; Data Systems</div><p>Ran hypothesis tests, cleaned multi-format datasets, scaled features and built exploratory dashboards with Pandas, NumPy and Seaborn.</p></article>
+<article><h3>Artificial Intelligence</h3><div class="m">Core AI &amp; Generative Systems</div><p>Designed prompt pipelines for generative AI endpoints and worked in Agile sprints on backend latency and model reports.</p></article>
+</div></section>
+
+<section id="skills"><h2>Skills</h2>
+<div class="skills" style="margin-top:28px">
+<div><h3>Languages</h3><p>Python, Java, C, SQL, JavaScript (ES6+)</p></div>
+<div><h3>AI &amp; data</h3><p>Machine learning, NLP, generative AI, OpenAI and Gemini APIs, prompt engineering, Scikit-Learn, Pandas, NumPy, speech recognition</p></div>
+<div><h3>Web</h3><p>Django, Flask, REST APIs, HTML5, CSS3, Bootstrap 5, Tailwind CSS, Chart.js, ReportLab</p></div>
+<div><h3>Databases</h3><p>PostgreSQL, SQLite, MySQL, schema normalisation</p></div>
+<div><h3>Cloud &amp; tools</h3><p>AWS, Git and GitHub, Linux shell, Postman, VS Code, Kaggle, Google Play Console</p></div>
+<div><h3>Security &amp; design</h3><p>Ethical hacking basics, OWASP web vulnerabilities, Wi-Fi security, Canva</p></div>
+</div></section>
+
+<section id="credentials"><h2>Credentials</h2>
+<p class="lead">Selected from 21 certificates. Recognition and education first.</p>
+<div class="grid" style="margin-bottom:36px">
+<article class="card"><h3>Education</h3><p><b>B.Tech, AI &amp; Data Science</b><br>M.V.R. College of Engineering &amp; Technology (JNTU Kakinada), 2023 – 2027</p><p>Intermediate (MPC), VJ Junior College, 2021 – 2023</p></article>
+<article class="card"><h3>Recognition</h3><ul class="clean"><li>First prize, Web Designing Competition, MVR College.</li><li>Campus placement selection through 10,000 Coders.</li><li>Kitech Campus Ambassador, 2025 – 2026.</li><li>Hack Devengers 2.0 national hackathon participant.</li></ul></article>
+</div>
+<ul class="certs">
+<li>Data Science (Python &amp; AI) Program<small>Besant Technologies · Jan 2026</small></li>
+<li>Python Programming Fundamentals<small>Aajhub × Sapienz Recruit · Jan 2026</small></li>
+<li>Generative AI Mastermind<small>Outskill · 2026</small></li>
+<li>QuizOff 2026, India's Biggest AI Quiz<small>CampusCrew &amp; Unstop · Jul 2026</small></li>
+<li>Full Stack Web Development (50+ hours)<small>Aajhub × Sapienz Recruit · May 2025</small></li>
+<li>Complete Java Developer Course<small>Aajhub × Sapienz Recruit · May 2025</small></li>
+<li>Complete Ethical Hacking Course<small>Aajhub × Sapienz Recruit · Apr 2025</small></li>
+<li>Google Play Store Listing<small>Google Play Academy · valid to Apr 2028</small></li>
+<li>Ignite for Entrepreneurs (42 hours)<small>Wadhwani Foundation · Nov 2025</small></li>
+<li>Graphic Design Essentials<small>Canva Design School · Nov 2025</small></li>
+</ul></section>
+
+<section id="contact"><h2>Contact</h2>
+<p class="contact"><a href="mailto:dhanasyam3@gmail.com">dhanasyam3@gmail.com</a></p>
+<div class="links"><a href="tel:+917815991936">+91 78159 91936</a><a href="https://github.com/Dhanasyam0996">GitHub</a><a href="https://linkedin.com/in/dhanasyama">LinkedIn</a></div>
+<p style="color:var(--muted);margin-top:16px">Andhra Pradesh, India</p></section>
+</div>
+<footer><div class="wrap">Dhanasyam Akasam · B.Tech AI &amp; Data Science, MVR College of Engineering &amp; Technology</div></footer>
+</body>
+</html>
